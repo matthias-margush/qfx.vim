@@ -1,0 +1,45 @@
+*qfx.txt* Display sings on QuickFix results
+
+Author:  Hauleth <lukasz@niemier.pl>
+Repo:    https://gitlab.com/hauleth/qfx.vim
+License: MIT <https://opensource.org/licenses/MIT>
+
+INTRODUCTION                                    *qfx*
+
+This plugin automatically shows signs in place after quickfix commands.  This
+is useful for people who do not like using automatic linters like |ale.vim| or
+|syntastic|.  It integrates quite well with |asyncdo| and propably other
+asynchronous |:make| runners.
+
+FUNCTIONS                                       *qfx-functions*
+
+qfx#place()                                     *qfx#place()*
+                 Place signs on lines in |getqflist()|.
+
+qfx#clear()                                     *qfx#clear()*
+                 Clear previously set signs.
+
+COMMANDS                                        *qfx-commands*
+
+:QfxPlace                                       *:QfxPlace*
+                 The same as |qfx#place()|.
+
+:QfxClear                                       *:QfxClear*
+                 The same as |qfx#clear()|.
+
+VARIABLES                                       *qfx-variables*
+
+g:qfx_signs_max                                 *g:qfx_signs_max*
+                 Maximum amount of placed signs.  This is used to improve
+                 performance of the plugin.  Defaults to 200.
+
+FAQ                                             *qfx-faq*
+
+How to disable automatic placing signs on |quickfix| commands without
+uninstalling plugin?
+
+>
+        :autocommand! qfx
+<
+
+ vim:tw=78:et:ft=help:norl:
