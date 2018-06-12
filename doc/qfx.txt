@@ -21,10 +21,10 @@ qfx#clear()                                     *qfx#clear()*
 
 COMMANDS                                        *qfx-commands*
 
-:QfxPlace                                       *:QfxPlace*
+:QFxPlace                                       *:QFxPlace*
                  The same as |qfx#place()|.
 
-:QfxClear                                       *:QfxClear*
+:QFxClear                                       *:QFxClear*
                  The same as |qfx#clear()|.
 
 VARIABLES                                       *qfx-variables*
