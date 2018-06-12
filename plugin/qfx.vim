@@ -22,8 +22,8 @@ augroup qfx
     autocmd QuickFixCmdPre [^l]* SignsClear
     autocmd QuickFixCmdPost [^l]* SignsPlace
 
-    autocmd BufWinLeave * if getbufvar(0 + expand('<abuf>'), '&ft') ==? 'qf' | SignsClear | endif
-    autocmd BufWinEnter * if getbufvar(0 + expand('<abuf>'), '&ft') ==? 'qf' | SignsPlace | endif
+    autocmd BufWinLeave * if getbufvar(0 + expand('<abuf>'), '&ft') ==? 'qf' | QfxClear | endif
+    autocmd BufWinEnter * if getbufvar(0 + expand('<abuf>'), '&ft') ==? 'qf' | QfxPlace | endif
 augroup END
 
 let &cpo = s:save_cpo
